@@ -18,7 +18,19 @@
 
 	<div class="flex-container">
 		<div class="flex-filter">
-			<a>ФИЛЬТР:</a>
+			<div class="filter">ФИЛЬТР:</div>
+			<div class="pr">ПРОИЗВОДИТЕЛИ:</div>
+			<div class="checkbox">
+				<input id="check1" type="checkbox" name="check" value="check1">
+				<label for="check1">BOSCH</label>
+				<br>
+				<input id="check2" type="checkbox" name="check" value="check2">
+				<label for="check2">ИНТЕРСКОЛ</label>
+				<input id="check3" type="checkbox" name="check" value="check3">
+				<label for="check3">MAKITA</label>
+				<input id="check4" type="checkbox" name="check" value="check4">
+				<label for="check4">DEWALT</label>
+			</div>	
 		</div>
 
 		<div class = "flex-main">
@@ -26,16 +38,25 @@
 				<div class="Sort">
 					<a>СОРТИРОВКА:</a>
 				</div>
-				<ul class="sort-list">
-					<li><a>По цене<a></li>
-					<li><a>По типу<a></li>
-					<li><a>По функционалу</a></li>
-				</ul>
-				<div></div>
+				<div class="sort-list">
+					<span class="price">ПО ЦЕНЕ</span>
+					<span class="type">ПО ТИПУ</span>
+					<span class="func">ПО ФУНЦИОНАЛУ</span>
+				</div>	
+				<div class="triangle-up"></div>
+				<div class="triangle-down"></div>
 			</div>
+
 			<div class="flex-product">
 					<% @products.each do |product| %>
-						<div class="item"><%= image_tag(product.image.thumb('90x100').url)%></div>
+						<div class="item">	
+							<%= image_tag(product.image.thumb('90x100').url)%>
+							<div class="product-title"><%= product.title%></div></ br>
+							<div class="old-price">22500P</div>
+							<div class="price">
+								<a><%= product.price%></a>
+							</div>						
+						</div>
 					<% end %>
 			</div>
 		</div>
@@ -44,14 +65,3 @@
 </body>
 </html>
 
-
-
-
-
-
-<!--
-<% @products.each do |product| %>
-<%= product.title %>
-<%= image_tag(product.image.thumb('180x180').url) %>
-<% end %>
--->
