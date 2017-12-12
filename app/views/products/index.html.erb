@@ -51,7 +51,7 @@
 					<% @products.each do |product| %>
 						<div class="item">	
 							<%= image_tag(product.image.thumb('90x100').url)%>
-							<div class="product-title"><%= product.title%></div></ br>
+							<div class="product-title"><%= product.title%></div>
 							<div class="old-price">22500P</div>
 							<div class="price">
 								<a><%= product.price%></a>

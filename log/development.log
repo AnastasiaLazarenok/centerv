@@ -13086,3 +13086,857 @@ DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsIn
 DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
 Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 12:49:41 +0300
 DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/products/new" for 127.0.0.1 at 2017-12-12 12:53:50 +0300
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (289.7ms)
+Completed 200 OK in 330ms (Views: 310.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-12 12:54:33 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dYqZrJvXwrDqVC9XI5gE9E7yCw0knuz822xcwWiJYPlbxQpltIYP+lgQernwcEUdhkkDpUCu2dSJO2H4wef3IA==", "product"=>{"title"=>"Перфоратор BFG 6000", "producer"=>"BOSCH", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f7b246c5308 @tempfile=#<Tempfile:/tmp/RackMultipart20171212-2550-1w6uzwy.jpg>, @original_filename="2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "price"=>"15 500"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (64.4ms)[0m  [1m[32mINSERT INTO `products` (`title`, `producer`, `price`, `created_at`, `updated_at`, `image_uid`) VALUES ('Перфоратор BFG 6000', 'BOSCH', 15, '2017-12-12 09:54:33', '2017-12-12 09:54:33', '2017/12/12/10t7wbazn5_2.jpg')[0m
+  [1m[35m (154.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/products/23
+Completed 302 Found in 262ms (ActiveRecord: 218.6ms)
+
+
+Started GET "/products/23" for 127.0.0.1 at 2017-12-12 12:54:33 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-12-12 12:54:36 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 12:54:37 +0300
+DRAGONFLY: shell command: 'convert' '/home/anastasia/Documents/repository/centerv/public/system/dragonfly/development/2017/12/12/10t7wbazn5_2.jpg' '-resize' '90x100' '/tmp/dragonfly20171212-2550-8qjoxu.jpg'
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 200
+Started GET "/products/new" for 127.0.0.1 at 2017-12-12 12:54:41 +0300
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-12 12:55:06 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"exJSnz2NQZnuqeB+/QEBhossk1Q35v6r5cenXKXnmmRVXcFWEtyM01zttZAu6UBvQ5eb/FPWy4O3kJplDIkNvQ==", "product"=>{"title"=>"Перфоратор BFG 1100", "producer"=>"BOSCH", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f7b18c99128 @tempfile=#<Tempfile:/tmp/RackMultipart20171212-2550-1t47n9t.jpg>, @original_filename="3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "price"=>"15 600"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (32.3ms)[0m  [1m[32mINSERT INTO `products` (`title`, `producer`, `price`, `created_at`, `updated_at`, `image_uid`) VALUES ('Перфоратор BFG 1100', 'BOSCH', 15, '2017-12-12 09:55:06', '2017-12-12 09:55:06', '2017/12/12/1qrhk9xu98_3.jpg')[0m
+  [1m[35m (133.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/products/24
+Completed 302 Found in 171ms (ActiveRecord: 166.3ms)
+
+
+Started GET "/products/24" for 127.0.0.1 at 2017-12-12 12:55:07 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-12 12:55:09 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 12:55:09 +0300
+DRAGONFLY: shell command: 'convert' '/home/anastasia/Documents/repository/centerv/public/system/dragonfly/development/2017/12/12/1qrhk9xu98_3.jpg' '-resize' '90x100' '/tmp/dragonfly20171212-2550-2t34iz.jpg'
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 200
+Started GET "/products" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 12:55:45 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 12:57:20 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 12:57:21 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 12:58:11 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 12:58:12 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 159ms (Views: 157.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:07:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/products/new" for 127.0.0.1 at 2017-12-12 13:07:13 +0300
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-12 13:07:30 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ed3TTBs4snnuxUF7qhBP50pjsbgWwE8X4NaoCGp4sG4/kkCFNGl/M1yBFJV5+A4Ogti5EHLwej+ygZUxwxYntw==", "product"=>{"title"=>"Перфоратор BFG 5000", "producer"=>"BOSCH", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f7b18917d60 @tempfile=#<Tempfile:/tmp/RackMultipart20171212-2550-j4mu06.jpeg>, @original_filename="1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"1.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "price"=>"12 500"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (57.9ms)[0m  [1m[32mINSERT INTO `products` (`title`, `producer`, `price`, `created_at`, `updated_at`, `image_uid`) VALUES ('Перфоратор BFG 5000', 'BOSCH', 12, '2017-12-12 10:07:30', '2017-12-12 10:07:30', '2017/12/12/4lxn6245nt_1.jpeg')[0m
+  [1m[35m (95.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/products/25
+Completed 302 Found in 160ms (ActiveRecord: 153.7ms)
+
+
+Started GET "/products/25" for 127.0.0.1 at 2017-12-12 13:07:31 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:07:33 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:07:33 +0300
+DRAGONFLY: shell command: 'convert' '/home/anastasia/Documents/repository/centerv/public/system/dragonfly/development/2017/12/12/4lxn6245nt_1.jpeg' '-resize' '90x100' '/tmp/dragonfly20171212-2550-1u6wagu.jpeg'
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 200
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 195ms (Views: 193.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:08:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:08:38 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:08:56 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:08:57 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:09:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 145ms (Views: 143.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:12:49 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:13:28 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 135ms (Views: 133.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:14:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:15:09 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 149ms (Views: 147.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:15:10 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 109ms (Views: 107.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:15:58 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 98ms (Views: 95.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:17:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:17:36 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 126ms (Views: 124.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:20:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 194ms (Views: 192.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:21:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:21:15 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 119ms (Views: 117.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:24:05 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:24:06 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 209ms (Views: 207.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:27:40 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 136ms (Views: 134.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:28:08 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 147ms (Views: 145.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:30:02 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:30:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:35:46 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 118ms (Views: 115.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:35:47 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:36:13 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 144ms (Views: 142.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:36:14 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:36:23 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:36:24 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:36:35 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:36:36 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:37:06 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:37:07 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:38:21 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:38:22 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 131ms (Views: 128.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:39:37 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:39:38 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:40:42 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:40:43 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:42:03 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304
+Started GET "/products" for 127.0.0.1 at 2017-12-12 13:44:24 +0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvc2xjc3hma2NpXzEuanBlZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=44c25f2b137753f4 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOHFuanR6ZWl0bF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36fb87ea6235f14c 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvN3dnOWhqY29mdF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=486779e6c9ec26dc 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvNG5wdG8xYnY1dF8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9f0d98278011300a 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvMXZrcGdnMmF5el8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=ddc1404435c791e6 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMTB0N3diYXpuNV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=9e2462185e9f2d76 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvNGx4bjYyNDVudF8xLmpwZWciXSxbInAiLCJ0aHVtYiIsIjkweDEwMCJdXQ?sha=c2d1c4c39b3c0023 304
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTIvMXFyaGs5eHU5OF8zLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=3f010833422c8e9e 304
+Started GET "/media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1" for 127.0.0.1 at 2017-12-12 13:44:25 +0300
+DRAGONFLY: GET /media/W1siZiIsIjIwMTcvMTIvMTEvOGZpc2pxbzk4dV8yLmpwZyJdLFsicCIsInRodW1iIiwiOTB4MTAwIl1d?sha=36a138d8de1dc3a1 304

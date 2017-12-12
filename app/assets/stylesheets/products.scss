@@ -146,6 +146,7 @@
 }
 
 .item{
+    flex-direction: column;
     width: 230px;
     height: 300px;
     font-size: 40px;
@@ -170,10 +171,11 @@
         margin-top: 20px;
         font-size: medium; 
         font-weight: bold; 
-        //красная цена
-        .product-price{
-            background-color: #EF3644;
-        }
+    }
+     //красная цена
+     .price{
+         
+         
     }
 }
 
@@ -182,5 +184,4 @@
 .footer{
     background-color: darkcyan;
     height: 200px;
- 
 }
