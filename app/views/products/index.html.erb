@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Centerv</title>  
+<link rel="stylesheets" href="products.scss">
+</head>
+
+<body>
+
+	<ul class="navbar">
+		<li><a>Главная</a></li>
+		<li><a>Компания</a></li>
+		<li><a>Каталог</a></li>
+		<li><a>Новости</a></li>
+		<li><a>Спецпредложения</a>
+		<li><a>Доставка</a>
+	</ul>
+
+	<div class="flex-container">
+		<div class="flex-filter">
+			<a>ФИЛЬТР:</a>
+		</div>
+
+		<div class = "flex-main">
+			<div class="flex-sort">
+				<div class="Sort">
+					<a>СОРТИРОВКА:</a>
+				</div>
+				<ul class="sort-list">
+					<li><a>По цене<a></li>
+					<li><a>По типу<a></li>
+					<li><a>По функционалу</a></li>
+				</ul>
+				<div></div>
+			</div>
+			<div class="flex-product">
+					<% @products.each do |product| %>
+						<div class="item"><%= image_tag(product.image.thumb('90x100').url)%></div>
+					<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+<% @products.each do |product| %>
+<%= product.title %>
+<%= image_tag(product.image.thumb('180x180').url) %>
+<% end %>
+-->
