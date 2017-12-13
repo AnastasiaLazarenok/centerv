@@ -8,103 +8,90 @@
    flex-direction: row;
    margin-left: 120px; 
    margin-right: 120px;
-   margin-top: 10px; 
+   margin-top: 30px; 
 }
 
 .flex-filter{
-    width: 10px;
-    height: 20px;
-    background-color: #F7F2EC;
-    flex: 0.5;
     text-align: left;
     color: black;
     font-size: 17px;
-    text-indent: 1em;
-    padding: 10px;
     border-radius: 5px; 
+}
+
+.filter{
+    background-color: #F7F2EC;
+    border: 5px solid #F7F2EC;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: PT Sans;
+    font-size: 13pt;
 }
 .pr{
     color: black;
     margin-top: 20px; 
     font-weight: bold; 
-    font-family: "Mistral" cursive; 
-}
-
-// чекбоксы 
-.checkbox{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    input[type=checkbox] {
-        display: none;
-    }
-    .checkbox label:before {
-        border-radius: 3px;
-    }
-    input[type=checkbox]:checked + label:before {
-        content: "\2713";
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-        font-size: 15px;
-        color: #f3f3f3;
-        text-align: center;
-        line-height: 15px;
-    }            
+    font-family: PT Sans;
+    font-size: 17px; 
 }
 
 .flex-main{
-    height: 1000px;
     flex-direction: column;
-    flex-wrap: wrap;
     display: flex;
-    flex: 2;
+    margin: 0 25px;
+    flex: 4;
 }
 
 .flex-sort{
     background-color: #F7F2EC;
-    height: 20px;
     align-items: flex-start;
+    justify-content: space-between;
     padding: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
     border-radius: 5px;
+    border: 5px solid #F7F2EC;
     display: flex;
+    font-family: PT Sans;
+    font-size: 13pt;
+}
+
+.sort{
+    margin-right: 30px;
 }
 .sort-list{
-    list-style-type: none;
-    margin-left: 80px;;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
-.price{
-    color: #EF3644;
 
-}
-.type{
-    border-bottom: 1px dotted #EF3644;
+.sort-el{
+    cursor: pointer;
+    text-align: center; 
     color: #C5C0BA;
-    margin-left: 20px;
+    margin: 0px 10px;
+    border-bottom: 1px dotted #f00;
 }
-.func{
-    border-bottom: 1px dashed #EF3644;
-    color: #C5C0BA;
-    margin-left: 40px;
+
+.sort-el.selected{
+    color: #EF3644;
+    border-bottom: 0px;
 }
+
 .triangle-up{
+    cursor: pointer;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 7.5px 13.0px 7.5px;
     border-color: transparent transparent #EF3743 transparent;
-    margin-left: 60px;
+    margin-right: -60px;
 }
 .triangle-down{
+    cursor: pointer;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 13.0px 7.5px 0 7.5px;
     border-color: #C7C2BE transparent transparent transparent;
-    margin-left: 30px;
+    margin-right: 20px;
 }
 
 
@@ -114,8 +101,8 @@
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
-   padding: 25px;
-   align-items: center;
+   padding: 25px 0;
+   margin: 0 5px;
 }
 
 
@@ -126,6 +113,8 @@
     overflow: hidden;
     background-color: #32425C;
     text-align: center;
+    font-family: Cuprum;
+    font-size: 17px;
     li {
         display: inline-block;
         margin-right: 10px;
@@ -148,40 +137,155 @@
 .item{
     flex-direction: column;
     width: 230px;
-    height: 300px;
     font-size: 40px;
     outline: 1px solid #C7C2BE;
-    img{
+    margin-bottom: 20px;
+    .img{
         display: block;
         margin: auto;
-        width: 40%;
-        padding-top: 50px; 
-    }
-    .product-title{
-        white-space: pre-wrap; 
-        font-size: large;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 20px; 
+        height: auto;
+        width: auto;
+    }
+    .title-producer{
+        flex-direction: row;
+        white-space: nowrap; 
+        font-size: 18px;
+        text-align: center;
+        margin-top: 5px;
         font-weight: bold; 
+        font-family: PT Sans;
+    }
+    .type{
+        font-size: small;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: PT Sans;
     }
     .old-price{
         color: #989898;
         text-decoration: line-through;       
         text-align: center;
-        margin-top: 20px;
-        font-size: medium; 
+        margin-top: 10px;
         font-weight: bold; 
+        font-size: 17px;
+        font-family: PT Sans;
+    }   
+
+    .angle-button{
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
     }
-     //красная цена
-     .price{
-         
-         
+
+    .angle-button a{
+        padding: 8px 2px 8px 4px;
+        float: left;
+        text-align:center;
+        text-decoration: none;
+        font: normal 16px Myriad Pro, Helvetica, Arial, sans-serif;
+        color: white;
+        position: relative;
+        background: #EF3644;
+        min-width:120px;
+        width:auto;
+        font-size: 17px;
+        font-family: PT Sans;
+        font-weight: bold;
     }
+    
+    .angle-button a::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -19px;
+        border-top: 19px solid transparent;
+        border-bottom: 19px solid transparent;
+        border-left: 1em solid;
+        right: -1em;
+        z-index: 2;
+        border-left-color: #EF3644;
+    } 
 }
-
-
 
 .footer{
-    background-color: darkcyan;
-    height: 200px;
+    background-color:#32425C;
+    height: 100px;
+    color: white;
+    font-size: large;
 }
+.footer>a{
+    margin-left: 150px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: PT Sans;
+
+    font-size: 15x;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: grey;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
