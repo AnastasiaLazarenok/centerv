@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+    respond_to :html, :js
     def index
         @products = Product.all
     end
@@ -8,8 +9,13 @@ class ProductsController < ApplicationController
     end
     def create
         @product = Product.new(product_params)
-        @product.save
-        redirect_to @product
+        respond_to do |format|
+            if @product.save
+                format.html { redirect_to action: "index"}
+            else
+                format.html { render action: "new" }
+            end
+        end
     end
 
     private

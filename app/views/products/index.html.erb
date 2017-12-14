@@ -1,85 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Centerv</title>  
-<link rel="stylesheets" href="products.scss">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
-</head>
-
-<body>
-
-<ul class="navbar">
-	<li><a>Главная</a></li>
-	<li><a>Компания</a></li>
-	<li><a>Каталог</a></li>
-	<li><a>Новости</a></li>
-	<li><a>Спецпредложения</a>
-	<li><a>Доставка</a>
-</ul>
-
 <div class="flex-container">
-	<div class="flex-filter">
-		<div class="filter">ФИЛЬТР:</div>
-		<div class="pr">ПРОИЗВОДИТЕЛИ:</div>
-
-		<label class="container">BOSCH
-			<input type="checkbox" checked="checked">
-			<span class="checkmark"></span>
-		</label>
-		<label class="container">ИНТЕРСКОЛ
-			<input type="checkbox" checked="checked">
-			<span class="checkmark"></span>
-		</label>
-		<label class="container">MAKITA
-			<input type="checkbox" checked="checked">
-			<span class="checkmark"></span>
-		</label>
-		<label class="container">DEWALT
-			<input type="checkbox" checked="checked">
-			<span class="checkmark"></span>
-		</label>
-		<label class="container">HITACHI
-			<input type="checkbox" checked="checked">
-			<span class="checkmark"></span>
-		</label>
-	</div>
-
-	<div class = "flex-main">
-		<div class="flex-sort">
-			<div class="sort">
-				<a>СОРТИРОВКА:</a>
-			</div>
-			<div class="sort-list">
-				<div class="sort-el selected">ПО ЦЕНЕ</div>
-				<div class="sort-el">ПО ТИПУ</div>
-				<div class="sort-el">ПО ФУНЦИОНАЛУ</div>
-			</div>	
-			
-			<div class="triangle-up"></div>
-			<div class="triangle-down"></div>
-			
-			
-		</div>
-
-		<div class="flex-product">
-			<% @products.each do |product| %>
-				<div class="item">	
-					<div class="img"><%= image_tag(product.image.thumb('150x150').url)%></div>
-					<div class="title-producer">
-						<%= product.title%>
-						<span class="brand"><%= product.producer%></span>
-					</div>
-					<div class="type"><%= product.product_type%></div>
-					<div class="old-price">22500P</div>					
-					<div class="angle-button">
-						<a href="#" class="current"><%= product.price%></a>
-					</div>																					
-				</div>
-			<% end %>
-		</div>
-	</div>
-</div>
-<div class="footer"><a>© 2017 Все права защищены</a></div>
-</body>
-</html>
-
+        <div class="flex-filter">
+            <div class="filter">ФИЛЬТР:</div>
+            <div class="pr">ПРОИЗВОДИТЕЛИ:</div>		
+            <label class="container">BOSCH 
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">ИНТЕРСКОЛ
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">MAKITA
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">DEWALT
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">HITACHI
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    
+        <div class = "flex-main">
+            <div class="flex-sort">
+                <div class="sort">
+                    <a>СОРТИРОВКА:</a>
+                </div>
+                <div class="sort-list">
+                    <div class="sort-el selected">ПО ЦЕНЕ</div>
+                    <div class="sort-el">ПО ТИПУ</div>
+                    <div class="sort-el">ПО ФУНЦИОНАЛУ</div>
+                </div>	
+                
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>				
+            </div>
+    
+            <div class="flex-product">
+                <% @products.each do |product| %>
+                    <div class="item">	
+                        <div class="img"><%= image_tag(product.image.thumb('150x150').url)%></div>
+                        <div class="title-producer">
+                            <%= product.title%>
+                            <span class="brand"><%= product.producer%></span>
+                        </div>
+                        <div class="type"><%= product.product_type%></div>
+                        <div class="old-price">22500P</div>					
+                        <div class="angle-button">
+                            <a href="#" class="current"><%= product.price%></a>
+                        </div>																					
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>

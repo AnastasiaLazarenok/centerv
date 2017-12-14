@@ -8,7 +8,8 @@
    flex-direction: row;
    margin-left: 120px; 
    margin-right: 120px;
-   margin-top: 30px; 
+   margin-top: 30px;
+   min-height: 100vh;
 }
 
 .flex-filter{
@@ -215,12 +216,13 @@
 
 .footer{
     background-color:#32425C;
-    height: 100px;
+    height: 70px;
     color: white;
     font-size: large;
-}
-.footer>a{
-    margin-left: 150px;
+    padding-top: 50px;
+    .footer-text{
+        margin-left:200px;
+    }
 }
 
 .container {
@@ -288,4 +290,8 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  .new_product{
+      min-height: 100vh;
   }

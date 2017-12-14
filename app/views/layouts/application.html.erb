@@ -4,11 +4,24 @@
     <title>Centerv</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheets" href="products.scss">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'checkbox' %>
+    <script type="text/javascript" src="http://www.yoursite.com/somewhere/on/your/webserver/jquery-history/scripts/jquery.history.min.js"></script>
+    <%= javascript_include_tag 'jquery.rails-ajax' %>
+    <%= javascript_include_tag 'RailsAjax-Config' %>
   </head>
 
   <body>
-    <%= yield %>
+      <ul class="navbar">
+        <li><%= link_to "Просмотр", @product, remote: true %></li>
+        <li><%= link_to "Создание", new_product_path, remote: true %></li>
+      </ul>
+      <div id="Content">
+          <%= yield %>
+      </div>      
   </body>
+  <div class="footer"><div class="footer-text">© 2017 Все права защищены</div></div>
 </html>
